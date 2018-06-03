@@ -10,7 +10,7 @@ USER root
 # Ensure that shell script added to image is set as executable
 RUN yum -y update && yum -y install openldap-clients && yum clean all
 RUN mkdir /scripts && chmod 777 /scripts
-COPY ./looper.sh /scripts && chmod 777 /scripts/looper.sh
+COPY . /scripts && chmod 777 /scripts/looper.sh
 
 USER 1001
 
