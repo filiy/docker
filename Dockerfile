@@ -4,6 +4,8 @@ FROM centos:centos7
 # Feel free to modify this
 MAINTAINER "Some dude?!"
 
+WORKDIR /
+
 # Docker is to execute all subsequent commands in this file as BusyBox's root user
 USER root
 
