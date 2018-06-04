@@ -10,7 +10,7 @@ WORKDIR .
 USER root
 
 # Ensure that shell script added to image is set as executable
-RUN yum -y update && yum -y install openldap-clients && yum clean all
+RUN yum -y install openldap-clients telnet httpd && yum clean all
 RUN mkdir /scripts && chmod 777 /scripts
 COPY ./looper.sh /scripts
 RUN chmod +x /scripts/looper.sh
