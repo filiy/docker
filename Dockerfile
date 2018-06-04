@@ -13,7 +13,7 @@ USER root
 RUN yum -y update && yum -y install openldap-clients && yum clean all
 RUN mkdir /scripts && chmod 777 /scripts
 COPY ./looper.sh /scripts
-RUN chmod 777 /looper.sh
+RUN chmod +x /scripts/looper.sh
 
 USER 1001
 
